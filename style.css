@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+/* Navigation Menu */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out; /* Smooth color change on hover */
+}
+
+.menu a:hover {
+    color: yellow;
+}
+
+/* Homepage Intro Section */
+.intro {
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+/* Fade-in animation for homepage title and text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro h1 {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.intro p {
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Slide-in effect for sections */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Star Rating */
+.star {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
